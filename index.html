@@ -1,1 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HLTH Europe 2026 — Email Sequences</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #f4f6f9; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
 
+const data = {
+  "Health Systems & Providers": {
+    cta: "register",
+    color: "#00B4A2",
+    notableAttendees: ["Mayo Clinic", "Cleveland Clinic", "Karolinska University Hospital", "Sahlgrenska University Hospital", "Johns Hopkins Medicine", "MD Anderson", "Charité - University Medicine Berlin", "Amsterdam UMC", "Guy's & St Thomas' NHS Foundation Trust", "Mass General Brigham"],
+    emails: [
+      {
+        id: "e1",
+        subject: "Being a healthcare provider is complicated. HLTH isn't.",
+        body: `You spend your days making healthcare work - systems, people, outcomes, chaos and all.
+
+But when do you get the chance to step back, see what's next, and meet the people building it?
+
+That's HLTH Europe 2026. Amsterdam, 15-18 June. 5,000+ attendees, 1 in 3 at C-level - including leaders from [NOTABLE_ATTENDEES].
+
+Here's what's waiting for you:
+
+* Speakers tackling the real stuff - AI governance, workforce, interoperability, funding pressure
+* Summits that go deep - cybersecurity, women's health, population health, and more
+* Networking that actually feels natural - no awkward lanyards, just good conversations
+* Provider Village + Stage - built specifically for health systems like yours
+
+It's not theory. It's transformation. And if you're not there, you'll be hearing about it from everyone who was.
+
+[Register now for HLTH Europe 2026](https://europe.hlth.com/register)`
+      },
+      {
+        id: "e2",
+        subject: "What's actually happening at HLTH Europe (the breakdown)",
+        body: `Quick follow-up - wanted to share what's specifically built for providers at HLTH Europe 2026.
+
+Here's the highlights:
+
+* [Provider & Payer Speaker Slots](https://europe.hlth.com/become-a-speaker) - share your wins and innovations on a main stage
+* Provider Village + Stage - where Europe's brightest health systems take the spotlight
+* [HLTH.rad](https://europe.hlth.com/rad) - where imaging, diagnostics, and data collide
+* [Market Connect](https://europe.hlth.com/connect-programme) - apply for a free ticket + curated meetings with the right partners
+* Summits - Cybersecurity, Interop, Women's Health, Population Health
+
+And everything that makes HLTH, HLTH - world-class hospitality, legendary parties, and energy that has everyone talking for months.
+
+"HLTH Europe is an excellent arena to connect, exchange ideas, and spark inspiration for the future transformation of healthcare." - Boubou Hallberg, CEO, Sahlgrenska University Hospital
+
+Your peers from [NOTABLE_ATTENDEES] are already confirmed. Are you?
+
+[Register now for HLTH Europe 2026](https://europe.hlth.com/register)`
+      },
+      {
+        id: "e3",
+        subject: "Last one from me - providers belong at HLTH",
+        body: `I'll keep this short.
+
+Everyone shaping the next era of care will be in Amsterdam this June - hospital CEOs, health tech innovators, national leaders, clinical changemakers.
+
+The conversations happening at HLTH Europe will be referenced for the rest of the year. The question is whether you're in the room when they happen.
+
+Don't be the one catching up after. Be the one everyone else is catching up to.
+
+[Register now for HLTH Europe 2026](https://europe.hlth.com/register)`
+      }
+    ]
+  },
+  "Payers": {
+    cta: "register",
+    color: "#7B5EA7",
+    notableAttendees: ["Bupa", "The Cigna Group", "Oscar Health", "AOK", "Die Techniker", "Meuhedet Health Services", "Leumit Health Services", "Maccabi HMO", "Simplyhealth", "AP Pension"],
+    emails: [
+      {
+        id: "e1",
+        subject: "The pressures don't stop. HLTH gives you space to think.",
+        body: `Rising medical costs. Tighter margins. Regulatory shifts. Member expectations through the roof.
+
+You're juggling all of it - and when do you get the space to step back and see what's actually coming next?
+
+That's HLTH Europe 2026. Amsterdam, 15-18 June.
+
+Leaders from [NOTABLE_ATTENDEES] are already confirmed - because they know the industry is shifting fast, and this is where the decisions get made.
+
+Here's what's waiting for you:
+
+* Speakers who understand the pressure - AI governance, rising costs, member engagement
+* Summits built for payers - fraud/waste/abuse, automation, population health, interoperability
+* Real networking with people who genuinely understand your challenges
+* A show floor packed with innovators ready to prove ROI
+
+It's not theory. It's transformation.
+
+[Register now for HLTH Europe 2026](https://europe.hlth.com/register)`
+      },
+      {
+        id: "e2",
+        subject: "What's in it for payers at HLTH Europe (the real breakdown)",
+        body: `Every payer I speak with is navigating the same pressures right now. Here's how HLTH Europe 2026 directly addresses them:
+
+Cost reduction, with proof - meet companies cutting avoidable admissions and modernising care coordination
+
+AI you can actually implement - operational AI, predictive analytics, FWA detection, governance frameworks. Deployed, not theoretical.
+
+Better member experiences - digital front door innovations, engagement platforms, behavioural health solutions
+
+Value-based care that works - real-world models and contracting strategies from peers who've made it happen
+
+[Market Connect](https://europe.hlth.com/connect-programme) also gives you curated, pre-qualified meetings with the partners most relevant to your goals. No fishing - just the right conversations.
+
+You're carrying the weight of the system. HLTH Europe gives you the partners, insights, and clarity to move forward.
+
+[Register now for HLTH Europe 2026](https://europe.hlth.com/register)`
+      },
+      {
+        id: "e3",
+        subject: "Your peers are already confirmed. Are you?",
+        body: `Leaders from major health plans, regional insurers, MA plans, and digital payers are already confirmed for HLTH Europe 2026 - including [NOTABLE_ATTENDEES].
+
+If cost containment, AI strategy, better outcomes, or member experience are on your 2026 roadmap, you need to be part of these conversations.
+
+* Direct access to the innovators shaping payer strategy
+* Meetings curated to your goals
+* Exclusive programming for plan leaders
+* Connections that turn into real partnerships
+
+This is where the next chapter of healthcare gets written. Your voice should be part of it.
+
+[Secure your spot at HLTH Europe 2026](https://europe.hlth.com/register)`
+      }
+    ]
+  },
+  "Government": {
+    cta: "register",
+    color: "#1A5276",
+    notableAttendees: ["German Federal Ministry of Health", "Ministry of Health, France", "Ministry of Health, Poland", "European Commission", "NHS England", "NHS Confederation", "Government of Malta", "Government of Montenegro", "Ministry of Social Affairs, Estonia", "NICE"],
+    emails: [
+      {
+        id: "e1",
+        subject: "Running a health system is complicated. HLTH is not.",
+        body: `You carry one of the toughest responsibilities in healthcare: delivering high-quality care, protecting population health, modernising services - all under public scrutiny and tight budgets.
+
+But when do you get the space to step back and understand what's coming next?
+
+That's exactly what HLTH Europe 2026 is designed for. Amsterdam, 15-18 June.
+
+Delegations from [NOTABLE_ATTENDEES] are already confirmed - because the future of healthcare cannot be shaped in isolation.
+
+* Speakers tackling national-scale challenges - digital transformation, funding pressures, AI governance, system resilience
+* Summits going deep on cybersecurity, population health, equity, interoperability, workforce
+* Peers from across Europe who understand the scale of your mandate
+
+Alongside the main event: the [Health Transformation Summit](https://europe.hlth.com/health-transformation-summit) - a closed-door gathering for senior government leaders and health system executives.
+
+If you're not in Amsterdam this June, you'll be hearing about it from every delegation that was.
+
+[Register now for HLTH Europe 2026](https://europe.hlth.com/register)`
+      },
+      {
+        id: "e2",
+        subject: "Where government health leaders find real solutions",
+        body: `Workforce shortages. Rising demand. Widening inequities. Outdated infrastructure. The list doesn't get shorter.
+
+HLTH Europe 2026 helps you cut through the noise and focus on what actually improves population outcomes and strengthens system resilience.
+
+Here's what's most valuable for government and public health leaders this year:
+
+Digital and data modernisation - interoperability, privacy-compliant AI, public sector cloud, EHR evolution
+
+Population health and prevention - chronic disease tools, community-based care, social determinants
+
+Workforce innovation - AI-supported workflows, automation, burnout reduction
+
+System efficiency - procurement innovation, integrated care, sustainable redesign
+
+Trust and governance - AI frameworks, cybersecurity, risk management for government-scale adoption
+
+For senior leaders, the [Health Transformation Summit](https://europe.hlth.com/health-transformation-summit) offers an intimate environment with 250 policymakers, health system CEOs, and payer executives. Interactive roundtables and high-impact networking on 15-16 June.
+
+Happy to share government-focused programming if useful.
+
+[Register now for HLTH Europe 2026](https://europe.hlth.com/register)`
+      },
+      {
+        id: "e3",
+        subject: "Government delegations are confirming fast",
+        body: `Delegations from [NOTABLE_ATTENDEES] have already confirmed for HLTH Europe 2026.
+
+If your priorities include digital transformation, AI governance, equitable access, or improving national outcomes - these are the conversations you need to be part of.
+
+* Direct access to proven, scalable solutions
+* Peers facing similar political and operational pressures
+* Policy-focused programming grounded in real results
+* A European and global perspective on how other systems are redesigning care
+
+For senior officials, the [Health Transformation Summit](https://europe.hlth.com/health-transformation-summit) provides an exclusive, closed environment for collaboration with 250 top decision makers.
+
+Your decisions shape the health of entire populations. HLTH Europe ensures you're supported with the insight and partnerships to move forward.
+
+[Secure your place at HLTH Europe 2026](https://europe.hlth.com/register)`
+      }
+    ]
+  },
+  "Pharma & Life Sciences": {
+    cta: "mixed",
+    color: "#E74C3C",
+    notableAttendees: ["AstraZeneca", "Pfizer", "Novartis", "Sanofi", "Roche", "Bayer", "Takeda", "Johnson & Johnson", "Merck Sharp & Dohme", "Boehringer Ingelheim"],
+    emails: [
+      {
+        id: "e1",
+        subject: "Pharma is evolving fast. Your next move should be clear.",
+        body: `Scientific progress is accelerating, regulatory expectations are shifting, competition is intensifying and commercial models are being rewritten. For senior pharma leaders, the next decade will reward those who can see the bigger picture and move early.
+
+That is why HLTH Europe 2026 exists. It brings together global pharma, biotech, regulators, life science innovators and senior healthcare leaders to understand what is changing and what it means for your organisation.
+
+Here is what you will find in Amsterdam:
+
+* Speakers who understand the pressures, from evidence generation and AI driven discovery to pricing, access, policy and global commercialisation
+* Deep dive summits on cybersecurity, women's health, interoperability, clinical innovation, and population health
+* Meaningful networking with C-suite leaders, scientific and commercial decision makers, regulators, investors and technology innovators
+* A show floor with real energy showcasing partners, platforms and technologies shaping the next chapter of life sciences
+
+Alongside the main event, we host the [Global Pharma Summit](https://europe.hlth.com/global-pharma-summit), an exclusive one day gathering for senior pharma and life science leaders. Building on last year's successful Pharma and Life Sciences Summit, it offers a strategic view of how science, regulation and market forces will shape pipeline strength and commercial performance in the years ahead.
+
+If you want clarity on what will shape pharma's future, you will find it in Amsterdam.
+
+[Register now for HLTH Europe 2026](https://europe.hlth.com/register)`
+      },
+      {
+        id: "e2",
+        subject: "The forces shaping pharma's next decade are coming into focus",
+        body: `Senior leaders across pharma and life sciences are navigating the same challenges. Faster science, rising development costs, tougher access environments, new regulatory pathways and rapidly evolving patient and market expectations.
+
+HLTH Europe 2026 helps make sense of these changes and highlights where the real strategic opportunities lie.
+
+Here is what is most valuable for pharma this year:
+
+Scientific and clinical innovation - new models in R&D, AI enabled discovery, next generation trials, real world evidence and emerging regulatory pathways.
+
+Commercial excellence - insight on launch readiness, global pricing and access, customer engagement, evidence generation and lifecycle strategy.
+
+Digital transformation - AI and automation in core pharma functions, data infrastructure, medical affairs innovation and modernised engagement models.
+
+Market dynamics - clarity on policy shifts, competitive pressures, new partnership models and evolving expectations from providers, payers and patients.
+
+For senior decision makers, the [Global Pharma Summit](https://europe.hlth.com/global-pharma-summit) brings together more than 250 leaders from global pharma, biotech, regulatory authorities and strategic partners. It is a focused, behind closed doors environment with roundtables, case studies and high value networking.
+
+If you would like, I can share a preview of the pharma programme or the list of organisations already attending.`
+      },
+      {
+        id: "e3",
+        subject: "Global pharma leaders are already confirmed for HLTH Europe 2026",
+        body: `C-suite and senior executives from [NOTABLE_ATTENDEES] and more have already confirmed for HLTH Europe 2026. They know the industry is shifting quickly and that this is where the conversations shaping its future are happening.
+
+Here is what you will gain by being there:
+
+* Strategic insight into how scientific, regulatory and market changes will affect portfolio and pipeline decisions
+* Access to senior leaders across pharma, policy, technology and investment
+* Innovation in practice from AI in discovery to modern clinical development and evidence generation
+* High value networking with the decision makers who influence global strategy, access and commercial success
+
+For those focused on high level direction, the [Global Pharma Summit](https://europe.hlth.com/global-pharma-summit) provides a concentrated environment for strategic discussion, cross industry collaboration and connection with 250 senior leaders who influence the future of life sciences.
+
+Pharma is changing rapidly. HLTH Europe is where you will see what comes next.
+
+[Secure your place at HLTH Europe 2026](https://europe.hlth.com/register)`
+      }
+    ]
+  },
+  "Healthtech Solutions & Providers": {
+    cta: "sponsor",
+    color: "#27AE60",
+    notableAttendees: ["Siemens Healthineers", "Philips", "Microsoft", "AWS", "Google for Health", "NVIDIA", "Meta", "Deloitte", "Accenture", "Boston Scientific"],
+    emails: [
+      {
+        id: "e1",
+        subject: "Being in healthtech is complicated. HLTH isn't.",
+        body: `You're building the future of healthcare. But even the boldest innovators need a place to connect, test ideas, and find their market.
+
+That's HLTH Europe 2026. Amsterdam, 15-18 June. The epicentre of health innovation - where the biggest players and the brightest startups collide (in the best way).
+
+[NOTABLE_ATTENDEES] are already sponsoring. Here's why:
+
+* Meet your market - buyers, partners, investors, and decision-makers who can turn your solution into scale
+* Show off your tech - HLTH.rad, AI@HLTH Zone, and a buzzing show floor built to spotlight what's next
+* Make the news - media, analysts, and influencers are everywhere
+* Unreal networking - no polite weather chat, just bold ideas and big opportunities
+
+If you're not there, your competitors will be. And you'll see it all over LinkedIn.
+
+[Sponsor HLTH Europe 2026](https://europe.hlth.com/sponsor)`
+      },
+      {
+        id: "e2",
+        subject: "What's in it for healthtech at HLTH Europe (the breakdown)",
+        body: `Let's cut through the noise - here's what HLTH Europe 2026 actually delivers for healthtech companies:
+
+[Market Connect](https://europe.hlth.com/connect-programme) - curated meetings with the buyers and partners that matter most. No cold outreach, just qualified conversations.
+
+HLTH.rad - sharp sessions showcasing real tech reshaping care delivery
+
+AI@HLTH Zone - the show's hottest destination. Demo, explore, or partner up
+
+Media Village - meet journalists, influencers, and analysts looking for the next big story
+
+World-class hospitality, incredible parties, and energy you just can't fake.
+
+"HLTH Europe sparked bold conversations, challenged comfort zones, and strengthened the innovation ecosystem across Europe and beyond." - Peter Schardt, CTO, Siemens Healthineers
+
+Your peers are already booking stands, sessions, and meetings. Don't be the one catching up.
+
+[Sponsor HLTH Europe 2026](https://europe.hlth.com/sponsor)`
+      },
+      {
+        id: "e3",
+        subject: "Healthtech belongs at HLTH Europe",
+        body: `HLTH Europe isn't just another conference. It's where new partnerships form, deals get done, and innovations go from idea to industry headline.
+
+This June in Amsterdam: every serious player in healthtech - from [NOTABLE_ATTENDEES] to the fastest-growing startups. Investors and buyers hunting for what's next. Spaces built for connection.
+
+If your solution is shaping the future of care, this is your stage. If you're not there, you'll be watching your competitors take it.
+
+Don't scroll past this one.
+
+[Sponsor HLTH Europe 2026](https://europe.hlth.com/sponsor)`
+      }
+    ]
+  },
+  "Investors": {
+    cta: "register",
+    color: "#F39C12",
+    notableAttendees: ["General Catalyst", "BlackRock", "SoftBank", "EQT Partners", "AlbionVC", "Speedinvest", "DN Capital", "Eurazeo", "7wire Ventures", "Galen Growth"],
+    emails: [
+      {
+        id: "e1",
+        subject: "Healthcare is getting more complex. Your next opportunity shouldn't be.",
+        body: `New models of care. AI-driven innovation. Regulatory change. Consolidation. Rising consumer expectations.
+
+Spotting real opportunity within all that change is hard - especially when you're assessing early trends, scaling potential, and long-term value creation.
+
+That's where HLTH Europe 2026 comes in. Amsterdam, 15-18 June.
+
+[NOTABLE_ATTENDEES] are already confirmed - alongside 5,000+ attendees, 1 in 3 at C-level, from across the ecosystem.
+
+* Sharp market insight across digital health, AI, workforce tools, virtual care, and payer transformation
+* Natural networking with founders, scale-ups, VCs, PE, and corporate venture leaders
+* A show floor packed with companies ready to grow, and executives ready to partner
+
+If you want to know where European health innovation is heading, you'll find the answers in Amsterdam.
+
+[Register now for HLTH Europe 2026](https://europe.hlth.com/register)`
+      },
+      {
+        id: "e2",
+        subject: "The best opportunities are found before everyone else sees them",
+        body: `Investors tell us they need clarity, credible founders, real traction, and access to the next wave of scalable health innovation.
+
+HLTH Europe 2026 brings all of that into one place.
+
+Deal flow across every stage - seed to growth, across digital health, AI, data infrastructure, life sciences, behavioural health, virtual care
+
+A clear view of market demand - direct conversations with health systems, governments, and payers reveal where adoption and funding is shifting
+
+Founders ready to scale - validated outcomes, regulatory readiness, clear value stories, European and global growth potential
+
+Macro trend insight - AI regulation, reimbursement change, workforce transformation, prevention models
+
+Happy to share a preview of investor-relevant sessions or the list of this year's exhibiting companies.`
+      },
+      {
+        id: "e3",
+        subject: "Leading investors are already confirmed",
+        body: `Venture funds, corporate venture teams, PE, and growth investors are already confirmed for HLTH Europe 2026 - including [NOTABLE_ATTENDEES].
+
+They know the sector is moving quickly, and this is where the conversations that shape investment direction happen.
+
+* Direct access to founders and scale-ups across Europe and beyond
+* Networking with active investors making deals now
+* Market intelligence that strengthens investment strategy
+* Early line of sight into the next wave of scalable health innovation
+
+Healthcare is changing rapidly. HLTH Europe is where its next chapter is being written.
+
+[Secure your place at HLTH Europe 2026](https://europe.hlth.com/register)`
+      }
+    ]
+  },
+  "Startups": {
+    cta: "sponsor",
+    color: "#E67E22",
+    notableAttendees: ["Neko Health", "Doccla", "Flo Health", "Ada Health", "Sidekick Health", "Doctolib", "Oviva", "BetterHelp", "Thriva", "Skin Analytics"],
+    emails: [
+      {
+        id: "e1",
+        subject: "5,000 healthcare decision-makers. One week.",
+        body: `Reaching the right healthcare decision-makers is painfully slow for startups - long sales cycles, cold outreach that goes nowhere, and never enough bandwidth.
+
+HLTH Europe 2026 is the shortcut.
+
+Amsterdam, 15-18 June. 5,000+ attendees, 1 in 3 at C-level. Buyers, payers, providers, pharma, and investors - all in one place. Companies like [NOTABLE_ATTENDEES] are already confirmed.
+
+For startups, HLTH isn't a nice-to-have conference. It's a pipeline accelerator:
+
+* Senior buyers across UK, France, Germany, Nordics, Benelux and the US
+* Pre-qualified meetings via [Market Connect](https://europe.hlth.com/connect-programme) - no endless prospecting
+* Visibility and credibility that opens doors faster than cold email ever could
+
+Worth exploring if 2026 is a growth year for your company?
+
+[Sponsor HLTH Europe 2026](https://europe.hlth.com/sponsor)`
+      },
+      {
+        id: "e2",
+        subject: "Cut months off healthcare sales and fundraising",
+        body: `Most early-stage healthtech founders I speak to say the same thing: you don't lack a product - you lack time, access, and warm intros.
+
+HLTH Europe was built to solve that.
+
+* Replace months of outbound with pre-matched meetings with providers, payers, and pharma
+* Get investor exposure through curated networking with active healthtech VCs - without a separate fundraising roadshow
+* Test your positioning fast by demoing in front of people who actually buy
+
+Instead of burning runway on travel, ads, or SDRs that don't convert - one concentrated week of pipeline, feedback, and visibility.
+
+Packages start from just 4,100 EUR with flexible payment terms spread from now until the event. Book a call to talk through what works for you: [CALENDAR LINK]
+
+[Sponsor HLTH Europe 2026](https://europe.hlth.com/sponsor)`
+      },
+      {
+        id: "e3",
+        subject: "Prime visibility goes fast (and it's going)",
+        body: `Startups who book early at HLTH Europe get:
+
+* Prime booth locations - higher footfall, better conversations, better leads
+* Year-round exposure via website and social channels
+* Lowest available pricing with flexible payment terms to protect runway
+
+Later-stage companies already know this game. They lock in early and dominate the floor.
+
+If you're aiming to sell into health systems, payers, or pharma - or attract investment - HLTH Europe is one of the few places where all of that happens at once.
+
+Worth a quick conversation?
+
+[Sponsor HLTH Europe 2026](https://europe.hlth.com/sponsor)`
+      }
+    ]
+  }
+};
+
+function App() {
+  const [activeSegment, setActiveSegment] = React.useState(Object.keys(data)[0]);
+  const [activeEmail, setActiveEmail] = React.useState(0);
+  const [editMode, setEditMode] = React.useState(false);
+  const [emails, setEmails] = React.useState(() => Object.fromEntries(Object.entries(data).map(([seg, v]) => [seg, v.emails.map(e => ({ ...e }))])));
+  const [attendees, setAttendees] = React.useState(() => Object.fromEntries(Object.entries(data).map(([seg, v]) => [seg, [...v.notableAttendees]])));
+  const [newAttendee, setNewAttendee] = React.useState("");
+  const [copiedIdx, setCopiedIdx] = React.useState(null);
+
+  const seg = data[activeSegment];
+  const color = seg.color;
+  const currentEmails = emails[activeSegment];
+  const currentAttendees = attendees[activeSegment];
+
+  const getRendered = (body) => {
+    const sample = currentAttendees.slice(0, 3).join(", ");
+    return body.replace(/\[NOTABLE_ATTENDEES\]/g, sample);
+  };
+
+  const handleBodyChange = (val) => {
+    const updated = [...currentEmails];
+    updated[activeEmail] = { ...updated[activeEmail], body: val };
+    setEmails({ ...emails, [activeSegment]: updated });
+  };
+
+  const handleSubjectChange = (val) => {
+    const updated = [...currentEmails];
+    updated[activeEmail] = { ...updated[activeEmail], subject: val };
+    setEmails({ ...emails, [activeSegment]: updated });
+  };
+
+  const removeAttendee = (i) => {
+    const updated = [...currentAttendees];
+    updated.splice(i, 1);
+    setAttendees({ ...attendees, [activeSegment]: updated });
+  };
+
+  const addAttendee = () => {
+    if (!newAttendee.trim()) return;
+    setAttendees({ ...attendees, [activeSegment]: [...currentAttendees, newAttendee.trim()] });
+    setNewAttendee("");
+  };
+
+  const copyEmail = (idx) => {
+    const e = currentEmails[idx];
+    const rendered = getRendered(e.body);
+    navigator.clipboard.writeText(`Subject: ${e.subject}\n\n${rendered}`);
+    setCopiedIdx(idx);
+    setTimeout(() => setCopiedIdx(null), 1500);
+  };
+
+  return (
+    <div style={{ fontFamily: "Inter, sans-serif", background: "#f4f6f9", minHeight: "100vh", paddingBottom: 40 }}>
+      <div style={{ background: "#0a1628", padding: "20px 28px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <div>
+          <div style={{ color: "#00B4A2", fontWeight: 800, fontSize: 13, letterSpacing: 2, textTransform: "uppercase" }}>HLTH Europe 2026</div>
+          <div style={{ color: "#fff", fontWeight: 700, fontSize: 20, marginTop: 2 }}>Cold Outreach Email Sequences</div>
+        </div>
+        <div style={{ color: "#aaa", fontSize: 12 }}>Amsterdam · 15-18 June 2026</div>
+      </div>
+
+      <div style={{ display: "flex" }}>
+        <div style={{ width: 200, minWidth: 200, background: "#fff", borderRight: "1px solid #e5e7eb", minHeight: "calc(100vh - 64px)" }}>
+          {Object.keys(data).map((s) => (
+            <button key={s} onClick={() => { setActiveSegment(s); setActiveEmail(0); setEditMode(false); }}
+              style={{ display: "block", width: "100%", textAlign: "left", padding: "14px 16px", fontSize: 13, fontWeight: activeSegment === s ? 700 : 400, background: activeSegment === s ? "#f0faf9" : "transparent", borderLeft: activeSegment === s ? `4px solid ${data[s].color}` : "4px solid transparent", border: "none", cursor: "pointer", color: activeSegment === s ? data[s].color : "#374151", lineHeight: 1.4 }}>
+              {s}
+            </button>
+          ))}
+        </div>
+
+        <div style={{ flex: 1, padding: "24px 28px" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
+            <div>
+              <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: "#0a1628" }}>{activeSegment}</h2>
+              <div style={{ fontSize: 12, color: "#6b7280", marginTop: 4 }}>
+                CTA: <span style={{ fontWeight: 600, color }}>{seg.cta === "register" ? "Register / Attend" : seg.cta === "sponsor" ? "Sponsor / Exhibit" : "Register + Sponsor (mixed)"}</span>
+                &nbsp;·&nbsp;3 email sequence
+              </div>
+            </div>
+            <button onClick={() => setEditMode(!editMode)} style={{ background: editMode ? color : "#fff", color: editMode ? "#fff" : color, border: `1.5px solid ${color}`, borderRadius: 8, padding: "8px 18px", fontSize: 13, fontWeight: 600, cursor: "pointer" }}>
+              {editMode ? "Done editing" : "Edit copy"}
+            </button>
+          </div>
+
+          <div style={{ background: "#fff", borderRadius: 10, padding: "16px 20px", marginBottom: 20, border: "1px solid #e5e7eb" }}>
+            <div style={{ fontWeight: 700, fontSize: 13, color: "#0a1628", marginBottom: 10 }}>Notable Attendees - used as [NOTABLE_ATTENDEES] in copy</div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+              {currentAttendees.map((a, i) => (
+                <span key={i} style={{ background: "#f0faf9", border: `1px solid ${color}30`, color: "#0a1628", borderRadius: 20, padding: "4px 12px", fontSize: 12, display: "flex", alignItems: "center", gap: 6 }}>
+                  {a}
+                  {editMode && <button onClick={() => removeAttendee(i)} style={{ background: "none", border: "none", cursor: "pointer", color: "#ef4444", fontSize: 14, padding: 0, lineHeight: 1 }}>x</button>}
+                </span>
+              ))}
+              {editMode && (
+                <span style={{ display: "flex", gap: 4 }}>
+                  <input value={newAttendee} onChange={e => setNewAttendee(e.target.value)} onKeyDown={e => e.key === "Enter" && addAttendee()} placeholder="Add organisation..." style={{ border: "1px solid #d1d5db", borderRadius: 20, padding: "4px 12px", fontSize: 12, outline: "none" }} />
+                  <button onClick={addAttendee} style={{ background: color, color: "#fff", border: "none", borderRadius: 20, padding: "4px 12px", fontSize: 12, cursor: "pointer" }}>Add</button>
+                </span>
+              )}
+            </div>
+            <div style={{ marginTop: 8, fontSize: 11, color: "#9ca3af" }}>The first 3 names auto-insert where [NOTABLE_ATTENDEES] appears in the email preview.</div>
+          </div>
+
+          <div style={{ background: "#fffbeb", border: "1px solid #fde68a", borderRadius: 10, padding: "12px 16px", marginBottom: 16, fontSize: 12, color: "#92400e", lineHeight: 1.7 }}>
+            <span style={{ fontWeight: 700 }}>Formatting guide - </span>
+            Write body copy in plain text. The system auto-adds the personalised greeting, your signature, and opt-out line.
+            &nbsp;Use <code style={{ background: "#fef3c7", padding: "1px 5px", borderRadius: 3 }}>* - item</code> for bullets &nbsp;·&nbsp;
+            <code style={{ background: "#fef3c7", padding: "1px 5px", borderRadius: 3 }}>https://url</code> for auto-linked URLs &nbsp;·&nbsp;
+            <code style={{ background: "#fef3c7", padding: "1px 5px", borderRadius: 3 }}>[link text](https://url)</code> for named links
+          </div>
+
+          <div style={{ display: "flex", gap: 8, marginBottom: 16 }}>
+            {currentEmails.map((e, i) => (
+              <button key={i} onClick={() => setActiveEmail(i)}
+                style={{ padding: "8px 18px", borderRadius: 8, border: `1.5px solid ${activeEmail === i ? color : "#e5e7eb"}`, background: activeEmail === i ? color : "#fff", color: activeEmail === i ? "#fff" : "#374151", fontWeight: activeEmail === i ? 700 : 400, fontSize: 13, cursor: "pointer" }}>
+                Email {i + 1}
+              </button>
+            ))}
+          </div>
+
+          <div style={{ background: "#fff", borderRadius: 10, border: "1px solid #e5e7eb", overflow: "hidden" }}>
+            <div style={{ background: `${color}12`, borderBottom: "1px solid #e5e7eb", padding: "14px 20px", display: "flex", alignItems: "flex-start", gap: 10 }}>
+              <div style={{ fontWeight: 700, fontSize: 12, color: "#6b7280", paddingTop: 2, minWidth: 60 }}>SUBJECT</div>
+              {editMode ? (
+                <input value={currentEmails[activeEmail].subject} onChange={e => handleSubjectChange(e.target.value)}
+                  style={{ flex: 1, fontWeight: 600, fontSize: 14, color: "#0a1628", border: "1px solid #d1d5db", borderRadius: 6, padding: "4px 10px", outline: "none" }} />
+              ) : (
+                <div style={{ fontWeight: 600, fontSize: 14, color: "#0a1628" }}>{currentEmails[activeEmail].subject}</div>
+              )}
+            </div>
+
+            <div style={{ background: "#f8fafc", borderBottom: "1px solid #e5e7eb", padding: "10px 20px", display: "flex", gap: 16, fontSize: 11.5, color: "#6b7280" }}>
+              <span style={{ display: "flex", alignItems: "center", gap: 4 }}><span style={{ background: "#d1fae5", color: "#065f46", borderRadius: 4, padding: "1px 6px", fontWeight: 600 }}>AUTO</span> Hi {"{{First Name}}"},</span>
+              <span style={{ display: "flex", alignItems: "center", gap: 4 }}><span style={{ background: "#d1fae5", color: "#065f46", borderRadius: 4, padding: "1px 6px", fontWeight: 600 }}>AUTO</span> Your signature</span>
+              <span style={{ display: "flex", alignItems: "center", gap: 4 }}><span style={{ background: "#d1fae5", color: "#065f46", borderRadius: 4, padding: "1px 6px", fontWeight: 600 }}>AUTO</span> Opt-out line</span>
+            </div>
+
+            <div style={{ padding: "20px" }}>
+              {editMode ? (
+                <textarea value={currentEmails[activeEmail].body} onChange={e => handleBodyChange(e.target.value)}
+                  style={{ width: "100%", minHeight: 420, fontFamily: "inherit", fontSize: 13.5, color: "#374151", lineHeight: 1.7, border: "1px solid #d1d5db", borderRadius: 8, padding: "14px", outline: "none", resize: "vertical", boxSizing: "border-box" }} />
+              ) : (
+                <pre style={{ margin: 0, fontFamily: "inherit", fontSize: 13.5, color: "#374151", lineHeight: 1.8, whiteSpace: "pre-wrap" }}>
+                  {getRendered(currentEmails[activeEmail].body)}
+                </pre>
+              )}
+            </div>
+            <div style={{ borderTop: "1px solid #e5e7eb", padding: "12px 20px", display: "flex", justifyContent: "flex-end" }}>
+              <button onClick={() => copyEmail(activeEmail)}
+                style={{ background: copiedIdx === activeEmail ? "#10b981" : color, color: "#fff", border: "none", borderRadius: 8, padding: "8px 20px", fontSize: 13, fontWeight: 600, cursor: "pointer" }}>
+                {copiedIdx === activeEmail ? "Copied!" : "Copy email"}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
